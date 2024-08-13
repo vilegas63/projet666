@@ -7,7 +7,7 @@ import { Elements } from '@stripe/react-stripe-js';
 
 function page() {
     const [totalAmount, setTotalAmount] = useState(0)
-    let [clientSecret, setClientSecret] = useState("");
+    const [clientSecret, setClientSecret] = useState("");
     const getSecret = async () => {
     const url = `/api/checkout`;
     const secret = await fetch(url, {
@@ -29,6 +29,9 @@ function page() {
     const stripePromise = getStripe(); // Utilisez getStripe au lieu de loadStripe directement
     const appearance = { theme: "stripe" };
     const options = { clientSecret, appearance };
+    if (totalAmount > 0) {
+        console.log("total prix: ", totalAmount);
+    }
   return (
     <div className='my-[6rem] lg:w-[50%] w-[95%] mx-auto flex flex-col'>
         <div className="w-full bg-white gap-5 grid grid-cols-[30%_70%] p-3 rounded-[1rem]">

@@ -17,14 +17,14 @@ function page() {
         </div>
         
         <div className="w-[70%] flex items-center justify-center">
-            <div class="flex items-center justify-center gap-5 bg-gray-200 py-2 h-[7rem] overflow-y-hidden overflow-x-scroll">
-                <a class="block" href={cap1.src} data-lightbox="image-gallery">
+            <div className="flex items-center justify-center gap-5 bg-gray-200 py-2 h-[7rem] overflow-y-hidden overflow-x-scroll">
+                <a className="block" href={cap1.src} data-lightbox="image-gallery">
                     <img src={cap1.src} alt="apperçue" />
                 </a>
-                <a class="block" href={cap2.src} data-lightbox="image-gallery">
+                <a className="block" href={cap2.src} data-lightbox="image-gallery">
                     <img src={cap2.src} alt="apperçue" />
                 </a>
-                <a class="block" href={cap3.src} data-lightbox="image-gallery">
+                <a className="block" href={cap3.src} data-lightbox="image-gallery">
                     <img src={cap3.src} alt="apperçue" />
                 </a>
             </div>
